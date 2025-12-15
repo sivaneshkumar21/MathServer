@@ -1,0 +1,38 @@
+
+<html>
+    <head>
+        <title>Vehicle Mileage</title>
+    </head>
+    <style>
+        .box
+        {
+            margin-top: 10%;
+            margin-left: 25%;
+            margin-right:25%;
+            border: 8px  aquamarine; 
+            background-color: red;
+            text-align: center; 
+        }
+    </style>
+    <body>
+        <div class="box">
+        <h1> Calculator for Fuel Efficiency </h1>
+        <h3>SIVANESH KUMAR.N</h3>
+        <h3>25001283</h3>
+        <br>
+        <form method="POST">
+            {% csrf_token %}
+            <label>DISTANCE: </label>
+            <input type="text" name="Distancetravelled" value="{{d}}" required> Km
+            <br><br>
+            <label>Volume Of Fuel: </label>
+            <input type="text" name="fuel" value="{{v}}" required> L
+            <br><br>
+            <input type="submit" value="Calculate">
+            <br><br>
+            <label>Efficiency: </label>
+            <input type="text" name="Fuel Efficiency" value="{{e}}"> Km/L
+        </form>
+        </div>
+    </body>
+</html>
